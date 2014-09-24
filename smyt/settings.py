@@ -92,3 +92,8 @@ STATICFILES_DIRS = (
 )
 
 YAML_DATA_FILE = os.path.join(BASE_DIR, 'data.yaml')
+
+try:
+    from heroku_settings import *
+except:
+    pass
