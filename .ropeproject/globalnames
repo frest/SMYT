@@ -1,0 +1,4 @@
+€}q(Udynamic_models.views]q(UModelCreateViewqUModelUpdateViewqU	IndexViewqUModelListViewqUModelDeleteViewqU	AjaxMixinqU	FormMixinq	UBelongToModelMixinq
+eUdynamic_models.utils]q(Ucreate_bodyqUget_dataqUget_nameqUYAML_DATA_FILEqUBASE_DIRqeUdynamic_models.forms]qUcreate_formqaUdynamic_models.tests]q(U	ModelTestqURequestTestqeU	smyt.urls]qUurlpatternsqaUsmyt.settings]q(UTEMPLATE_DIRSqUUSE_L10NqULANGUAGE_CODEqUUSE_TZqUUSE_I18NqU	DATABASESqU	TIME_ZONEqU
+STATIC_URLq UYAML_DATA_FILEq!UROOT_URLCONFq"UTEMPLATE_DEBUGq#UWSGI_APPLICATIONq$UMIDDLEWARE_CLASSESq%UDEBUGq&UALLOWED_HOSTSq'U
+SECRET_KEYq(UINSTALLED_APPSq)USTATICFILES_DIRSq*UBASE_DIRq+eUdynamic_models.admin]q,Umodelq-aUdynamic_models.models]q.(Ucreate_bodyq/Ugenerate_modelsq0Ucreate_fieldq1Uget_dataq2Uget_nameq3Udynamic_modelsq4eUdynamic_models.urls]q5Uurlpatternsq6au.

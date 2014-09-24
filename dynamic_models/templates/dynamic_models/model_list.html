@@ -1,0 +1,51 @@
+{% extends "_layouts/base.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ block.super }} | Main Page{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.min.css' %}" />
+    <style type="text/css" media="screen">
+        .table td, .table th{
+            text-align: center;
+        }
+        .remove:hover {
+            color: red;
+        }
+    </style>
+{% endblock css %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="sidebar col-sm-2">
+            <ul class="nav nav-pills nav-stacked">
+                {% for name, model in dynamic_models.items %}
+                    <li class="model" id="model-{{ name }}"><a href="#">{{ model.get_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-sm-8">
+            <div class="data-table">
+                <form class="table-form">
+                    <table class="table table-bordered teble-hover table-condensed">
+                        <tbody></tbody>
+                    </table>
+                </form>
+            </div>
+            <hr>
+            <div class="data-form">
+                <form class="form" role="form">
+                    <h3>Добавить</h3>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/dynamic_models/app.js' %}"></script>
+{% endblock js %}
