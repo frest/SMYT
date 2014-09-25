@@ -71,6 +71,7 @@ function toggleActive(model) {
 }
 
 function renderForm(data) {
+    $('.form').empty();
     for (var field in data['fields']) {
         field_id = data['fields'][field];
         field_class = 'string';
