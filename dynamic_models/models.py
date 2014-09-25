@@ -7,12 +7,10 @@ from smyt.settings import YAML_DATA_FILE
 
 
 def get_name(self):
-    """ Return models verbose name."""
     return self._meta.verbose_name_plural
 
 
 def get_data():
-    """ Return dict with data from structure conf file."""
     try:
         return yaml.load(file(YAML_DATA_FILE).read())
     except Exception:
@@ -34,7 +32,6 @@ def create_field(field):
 
 
 def create_body(model, model_name):
-    """ Return body of model class. """
     title = model['title']
     body = {'__module__': 'dynamic_models.models'}
     meta = type('Meta', (object, ),
