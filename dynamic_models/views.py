@@ -5,6 +5,7 @@ from django.views import generic
 from django.http import HttpResponse, Http404
 from django.core import serializers
 from django.forms.models import model_to_dict
+from django.middleware.csrf import get_token
 
 from .models import dynamic_models
 from .forms import create_form
@@ -42,6 +43,11 @@ class IndexView(generic.TemplateView):
         context = super(IndexView, self).get_context_data(**kwargs)
         context.update({'dynamic_models': dynamic_models})
         return context
+    
+    def render_to_response(self, context, **response_kwargs):
+        get_token(self.request)
+        return super(IndexView, self).render_to_response(context,
+                                                        **response_kwargs)
 
 
 class ModelListView(BelongToModelMixin, generic.ListView):
