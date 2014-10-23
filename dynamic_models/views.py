@@ -50,7 +50,7 @@ class IndexView(generic.TemplateView):
                                                         **response_kwargs)
 
     def render_to_response(self, context, **response_kwargs):
-        get_token(self.request)
+        get_context(self.request)
         return super(IndexView, self).render_to_response(context,
                                                          **response_kwargs)
 
