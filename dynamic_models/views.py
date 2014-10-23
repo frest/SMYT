@@ -49,6 +49,11 @@ class IndexView(generic.TemplateView):
         return super(IndexView, self).render_to_response(context,
                                                         **response_kwargs)
 
+    def render_to_response(self, context, **response_kwargs):
+        get_token(self.request)
+        return super(IndexView, self).render_to_response(context,
+                                                         **response_kwargs)
+
 
 class ModelListView(BelongToModelMixin, generic.ListView):
     def render_to_response(self, context, **response_kwargs):
