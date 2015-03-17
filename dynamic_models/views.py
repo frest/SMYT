@@ -94,7 +94,7 @@ class ModelDeleteView(
             }}
         except Exception:
             context = {'message': {
-                'text': r'Такого обхекта не существует',
+                'text': r'Такого объекта не существует',
                 'status': 'error',
             }}
         return HttpResponse(
